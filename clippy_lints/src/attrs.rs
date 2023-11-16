@@ -19,7 +19,7 @@ use rustc_middle::lint::in_external_macro;
 use rustc_middle::ty;
 use rustc_session::{declare_lint_pass, declare_tool_lint, impl_lint_pass};
 use rustc_span::symbol::Symbol;
-use rustc_span::{sym, DUMMY_SP, Span};
+use rustc_span::{sym, Span, DUMMY_SP};
 use semver::Version;
 
 static UNIX_SYSTEMS: &[&str] = &[
@@ -370,7 +370,7 @@ declare_clippy_lint! {
     ///     let _ = 1 / random();
     /// }
     /// ```
-    #[clippy::version = "1.73.0"]
+    #[clippy::version = "1.74.0"]
     pub SHOULD_PANIC_WITHOUT_EXPECT,
     pedantic,
     "ensures that all `should_panic` attributes specify its expected panic message"
