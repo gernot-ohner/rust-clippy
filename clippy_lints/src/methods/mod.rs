@@ -4367,6 +4367,9 @@ impl Methods {
                 ("map_or_else", [def, map]) => {
                     result_map_or_else_none::check(cx, expr, recv, def, map);
                 },
+                ("map_or_else", [def, map]) => {
+                    result_map_or_else_none::check(cx, expr, recv, def, map);
+                },
                 ("next", []) => {
                     if let Some((name2, recv2, args2, _, _)) = method_call(recv) {
                         match (name2, args2) {
